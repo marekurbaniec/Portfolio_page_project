@@ -1,5 +1,14 @@
 * {
     --dark-color: #535c68;
+    --light-color: #f2f2f2;
+    --green-color: #46a832;
+    --roboto: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
 }
 
 header {
@@ -15,12 +24,10 @@ header {
 }
 
 .header__text-box {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--roboto);
     color: var(--dark-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    justify-items: center;
 }
 
 @media (max-width: 800px) {
@@ -50,5 +57,95 @@ header {
 .about-me {
     width: 100vw;
     height: 100vh;
-    background-color: gray;
+    background-color: white;
+    display: grid;
+    justify-items: center;
+    box-sizing: border-box;
+    
+}
+
+.about-me__header {
+    width: 100vw;
+    height: 20vh;
+    background-color: white;
+
+
+}
+
+.about-me__header--title {
+    font-family: var(--roboto);
+    font-size: 3vw;
+    color: var(--dark-color);
+    display: flex;
+    justify-content: center;
+    padding-top: 8vh;
+}
+
+.about-me__container {
+    width: 90vw;
+    height: 80vh;
+    background-color: var(--light-color);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.about-me__container--profile-image img {
+    width: 60%;
+}
+
+@media(max-width:800px){
+    .about-me__container{
+        flex-direction: column; 
+    }
+    .about-me__container--profile-image img {
+        width:30%;
+        padding: 1%;
+        box-sizing: border-box;
+    }
+}
+
+.about-me__container--profile-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+
+
+.about-me__container--quick-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-self: center;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+
+.about-me__container--quick-info h3 {
+    font-family: var(--roboto);
+}
+
+.about-me__container--quick-info h3 b {
+    color: var(--green-color);
+}
+
+.about-me__container--quick-info h3 a {
+    text-decoration: none;
+    color: var(--green-color);
+}
+
+.about-me__container--long-info {
+    display: flex;
+    flex: 1;
+    flex-flow: wrap;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+
+.about-me__container--long-info h3{
+  font-family: var(--roboto);
 }
